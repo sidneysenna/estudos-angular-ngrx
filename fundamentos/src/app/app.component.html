@@ -1,6 +1,9 @@
-<input type="text" [value]=inputText [disabled]="inputDisabled">
+
+<!-- property binding: colchete indica passando um valor da direita para esquerda apenas -->
+<input type="text" [value]=inputText [disabled]="inputDisabled" (input)="handleInput($event)">
 <br>
 
+<!-- event binding: parentes indica recebendo um valor da esquerda para a direita --> 
 <button (click)="toogleInput()">habilitar</button>
 <button (click)="toogleInput()">desabilitar</button>
 <button (click)="logInputText()">LOG</button>

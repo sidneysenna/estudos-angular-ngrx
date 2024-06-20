@@ -22,7 +22,7 @@ export class AppComponent {
     );
   }
 
-  handleKeyup(event: KeyboardEvent) {
+  handleInput(event: Event) {
     console.log((event.target as HTMLInputElement).value);
   }
 }
