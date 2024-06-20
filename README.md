@@ -31,3 +31,6 @@ Extensões
 - Shades of Purple
 - Ayu
 
+Install Angular Material
+- ng add @angular/material
+- 
