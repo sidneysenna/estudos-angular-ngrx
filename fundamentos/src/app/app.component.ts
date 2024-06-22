@@ -8,21 +8,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'fundamentos';
 
-  inputText = 'inputinho';
-  inputDisabled = true;
-
-  toogleInput() {
-    this.inputDisabled = !this.inputDisabled;
-  }
-
-  logInputText() {
-    console.log(
-      'O valor nao eh alterado pq esta em uma unica direcao...',
-      this.inputText
-    );
-  }
-
-  handleInput(event: Event) {
-    console.log((event.target as HTMLInputElement).value);
-  }
+  buttonTitle = 'Botao de apertar';
+  btnDisbled = false;
 }
