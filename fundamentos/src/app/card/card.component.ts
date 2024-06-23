@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, numberAttribute } from '@angular/core';
 
 function handlePlanType(valor: string) {
   return valor.toUpperCase();
@@ -13,7 +13,7 @@ export class CardComponent {
   @Input({ alias: 'planType', transform: (v: string) => handlePlanType(v) })
   planType: string = '';
 
-  @Input({ required: true }) planPrice: number = 0;
+  @Input({ required: true, transform: numberAttribute }) planPrice: number = 0;
 
   onButtonClicked(event: boolean) {
     console.log('onButtonClicked: ', event);
