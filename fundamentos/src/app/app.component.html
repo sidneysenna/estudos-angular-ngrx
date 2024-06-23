@@ -1,6 +1,14 @@
 <div class="cards-container">
   <!-- acessando diretamente o atributo planTypeAlias-->
-  <app-card planTypeAlias="cardPlanType" [planPrice]="cardPlanPrice"></app-card>
+  <app-card [planTypeAlias]="cardPlanType" [planPrice]="cardPlanPrice"></app-card>
 
   <app-card-roxo></app-card-roxo>
 </div>
+
+<br>
+
+<input #meuInput 
+type="text"
+(keyup)="handlePlanType(meuInput.value)"
+placeholder="Digite um valor"
+>
