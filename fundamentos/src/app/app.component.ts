@@ -3,11 +3,9 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'fundamentos';
-
-  buttonTitle = 'Botao de apertar';
-  btnDisbled = false;
+  cardPlanType: string = 'jjj';
+  cardPlanPrice: number = 10;
 }
