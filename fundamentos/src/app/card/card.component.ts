@@ -7,5 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 export class CardComponent {
   @Input('planTypeAlias') planType: string = '';
-  @Input() planPrice: number = 0;
+  @Input({ required: true }) planPrice: number = 0;
 }
