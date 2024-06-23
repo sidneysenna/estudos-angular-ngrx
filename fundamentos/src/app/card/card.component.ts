@@ -1,12 +1,16 @@
 import { Component, Input } from '@angular/core';
 
+function handlePlanType(valor: string) {
+  return valor.toUpperCase();
+}
+
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss'],
 })
 export class CardComponent {
-  @Input({ alias: 'planType', transform: (v: string) => v.toUpperCase() })
+  @Input({ alias: 'planType', transform: (v: string) => handlePlanType(v) })
   planType: string = '';
 
   @Input({ required: true }) planPrice: number = 0;
