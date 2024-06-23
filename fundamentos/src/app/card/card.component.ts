@@ -6,20 +6,12 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./card.component.scss'],
 })
 export class CardComponent {
-  private _planType: string = '';
-
-  @Input('planTypeAlias')
-  set planType(tipo: string) {
-    this._planType = tipo;
-  }
+  @Input({ alias: 'planType', transform: (v: string) => v.toUpperCase() })
+  planType: string = '';
 
   @Input({ required: true }) planPrice: number = 0;
 
   onButtonClicked(event: boolean) {
     console.log('onButtonClicked: ', event);
-  }
-
-  get planType() {
-    return this._planType.toUpperCase();
   }
 }
