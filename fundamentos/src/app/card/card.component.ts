@@ -13,7 +13,7 @@ export class CardComponent {
   @Input({ alias: 'planType', transform: (v: string) => handlePlanType(v) })
   planType: string = '';
 
-  @Input({ required: true, transform: numberAttribute }) planPrice: number = 0;
+  @Input({ required: true }) planPrice: number = 0;
 
   onButtonClicked(event: boolean) {
     console.log('onButtonClicked: ', event);
